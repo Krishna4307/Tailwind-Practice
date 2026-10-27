@@ -12,14 +12,14 @@
     <!-- Navbar -->
     <header class="flex flex-row p-5 ">
         <nav class="flex flex-row gap-50">
-            <a href="#" class="text-4xl flex-2 font-bold text-green-600 w-100 ml-10">MyPortfolio</a>
+            <a href="#" class="text-4xl flex-2 font-bold text-cyan-900 w-100 ml-10">MyPortfolio</a>
             <ul class="flex flex-row gap-5 text-lg text-gray-500 align-middile mt-2 w-120">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="hover:text-black">Home</a></li>
+                <li><a href="#about" class="hover:text-black">About</a></li>
+                <li><a href="#projects" class="hover:text-black">Projects</a></li>
+                <li><a href="#contact" class="hover:text-black">Contact</a></li>
             </ul>
-            <button type="button" class="bg-blue-500 border-0 text-lg text-white rounded-3xl w-30 h-10 p-2">Let's Talk &rarr;</button>
+            <button type="button" class="bg-blue-500 border-0 text-lg text-white rounded-3xl w-30 h-10 p-2 hover:bg-blue-400">Let's Talk &rarr;</button>
         </nav>
 
     </header>
@@ -36,8 +36,8 @@
                     CSS, JavaScript, and React.
                 </p>
                 <div class="w-200">
-                    <button class="btn text-xl font-bolder rounded-2xl text-white bg-green-800 mr-5 p-3">VIEW MY WORK &rarr;</button>
-                    <button class="btn text-xl rounded-lg text-white bg-blue-400 p-3">CONTACT ME</button>
+                    <button class="btn text-xl font-bolder rounded-2xl text-white bg-green-800 mr-5 p-3 hover:bg-green-700">VIEW MY WORK &rarr;</button>
+                    <button class="btn text-xl rounded-lg text-white bg-blue-400 p-3 hover:bg-blue-300">CONTACT ME</button>
                 </div>
             </div>
 
@@ -75,27 +75,32 @@
         </section>
 
         <!-- Skills Section -->
-        <section id="skills" class="grid grid-rows[auto_auto] gap-15  p-5 mt-5 justify-items-center">
+        <section id="skills" class="grid grid-rows[auto_auto] gap-10  p-5 mt-5 justify-items-center">
             <h2 class="text-4xl font-bold text-red-800 tracking-widest">My Skills</h2>
             <div class="flex flex-row gap-10 items-center justify-items-center p-2">
-                <div class="flex flex-col items-center bg-gray-100 p-5 rounded-lg mb-5">
+                <div class="flex flex-col items-center justify-center bg-gray-100 p-5 rounded-lg mb-5">
                     <h3 class="font-bold text-md">HTML</h3>
-                    <p class="text-gray-600">Semantic webpage structure</p>
+                    <p class="text-gray-600 text-center">Semantic webpage structure</p>
                 </div>
 
                 <div class="flex flex-col items-center bg-gray-100 p-5 rounded-lg mb-5">
                     <h3 class="font-bold text-md">CSS</h3>
-                    <p class="text-gray-600">Styling and responsive layouts</p>
+                    <p class="text-gray-600 text-center">Styling and responsive layouts</p>
                 </div>
 
                 <div class="flex flex-col items-center bg-gray-100 p-5 rounded-lg mb-5">
                     <h3 class="font-bold text-md">JavaScript</h3>
-                    <p class="text-gray-600">Interactive web applications</p>
+                    <p class="text-gray-600 text-center">Interactive web applications</p>
+                </div>
+
+                <div class="flex flex-col items-center bg-gray-100 p-5 rounded-lg mb-5">
+                    <h3 class="font-bold text-md">TailwindCSS</h3>
+                    <p class="text-gray-600 text-center">Utility-first styling and responsive web design</p>
                 </div>
 
                 <div class="flex flex-col items-center bg-gray-100 p-5 rounded-lg mb-5" >
                     <h3 class="font-bold text-md">React</h3>
-                    <p class="text-gray-600">Component-based development</p>
+                    <p class="text-gray-600 text-center">Component-based development</p>
                 </div>
             </div>
         </section>
@@ -162,6 +167,7 @@
         <section id="contact" class="mt-5 grid grid-rows[auto_auto_auto] gap-2 bg-gray-100 px-5 ">
             <h2 class="text-4xl font-medium tracking-wider px-15">Let's Work Together</h2>
             <p class="text-xl text-gray-500 tracking-widest px-15">Have a project in mind? I'd love to hear from you.</p>
+
             <form class="flex flex-col gap-5 items-center w-175 justify-self-center my-5 py-5 bg-gray-100 shadow-xl rounded-2xl">
                 <div >
                     <label for="name" class="text-md mb-2 inline-block">Your Name </label><br/>
@@ -172,16 +178,16 @@
                 <div >
                     <label for="email" class="text-md mb-2 mb-2 inline-block">Your Email</label><br/>
                     <input 
-                    class="border-1 w-100 pl-5 p-1 rounded-md
+                    class="border-1 w-100 pl-5 p-1 rounded-md"
                     type="email" id="email" name="email" placeholder="Enter your email"/>
                 </div>
                 <div>
                     <label for="message" class="inline-block text-md mb-2 mb-2">Your Message</label><br/>
                     <textarea 
-                    class="border-1 w-100 pl-5 pt-2 rounded-md
+                    class="border-1 w-100 pl-5 pt-2  rounded-md"
                     id="message" name="message" rows="5" placeholder="Write your message"></textarea>
                 </div>
-                <button type="submit" class="bg-black text-white font-medium hover:bg-fuchsia-500 p-2 rounded-md">Send Message</button>
+                <button type="submit" id="form-submit-btn" class="bg-black text-white font-medium hover:bg-fuchsia-500 p-2 rounded-md">Send Message</button>
             </form>
         </section>
     </main>
@@ -196,6 +202,23 @@
             <a href="#contact" class="text-blue-600 font-medium hover:underline">Contact</a>
         </div>
     </footer>
-
+    <script>
+        const form_submit_btn=document.getElementById("form-submit-btn");
+        form_submit_btn.addEventListener("click",(e)=>{
+            e.preventDefault();
+            const name=document.getElementById("name").value;
+            const email=document.getElementById("email").value;
+            const message=document.getElementById("message").value;
+            if(name && email && message){
+                alert("Thnakyou for Submitting your details🤗! successfully recieved your details ✅");
+                document.getElementById("name").value = "";
+                document.getElementById("email").value = "";
+                document.getElementById("message").value = "";
+            }
+            else{
+                alert("⚠️ Please fill all the fields before submitting the form.");
+            }
+        })
+    </script>
 </body>
 </html>
